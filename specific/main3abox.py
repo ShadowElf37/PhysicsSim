@@ -88,14 +88,14 @@ def block_stasis(obj):
 
 
 for block in points:
-    block.add_force(spring)
-    block.add_force(ramp_friction)
-    block.add_force(ramp_gravity)
-    block.add_force(gravity)
+    block.add_forces(spring)
+    block.add_forces(ramp_friction)
+    block.add_forces(ramp_gravity)
+    block.add_forces(gravity)
 
     block.add_trigger(fix_velocity_at_ramp, at_ramp)
 
-    block.add_force(block_stasis)
+    block.add_forces(block_stasis)
 
 
 # SIMULATE

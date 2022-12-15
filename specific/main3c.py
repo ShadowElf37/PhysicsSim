@@ -72,10 +72,10 @@ def gravity(obj):
 
 
 block = Object(m, x, v, debug=False)
-block.add_force(spring)
-block.add_force(ramp_friction)
-block.add_force(ramp_gravity)
-block.add_force(gravity)
+block.add_forces(spring)
+block.add_forces(ramp_friction)
+block.add_forces(ramp_gravity)
+block.add_forces(gravity)
 
 block.add_trigger(fix_velocity_at_ramp, at_ramp)
 
